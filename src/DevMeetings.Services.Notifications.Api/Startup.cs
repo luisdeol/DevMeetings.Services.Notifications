@@ -41,7 +41,8 @@ namespace DevMeetings.Services.Notifications.Api
             services.AddTransient<IMailRepository, MailRepository>();
 
             services.AddHostedService<UserCreatedConsumer>();
-
+            services.AddHostedService<ParticipantRegisteredConsumer>();
+            
             services.AddControllers();
 
             services.AddSwaggerGen(c =>
